@@ -64,7 +64,7 @@
     <article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2016/07/10/hello-world/" class="article-date">
-  <time datetime="2016-07-10T09:32:16.394Z" itemprop="datePublished">2016-07-10</time>
+  <time datetime="2016-07-10T13:52:02.121Z" itemprop="datePublished">2016-07-10</time>
 </a>
     
   </div>
@@ -75,7 +75,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2016/07/10/hello-world/">Hello World</a>
+      <a class="article-title" href="/2016/07/10/hello-world/">hexo搭建</a>
     </h1>
   
 
@@ -83,7 +83,102 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
+        <p>跟一个同学闲聊中无意中了解了hexo,它是一款基于Node.js的静态博客框架.</p>
+<h4 id="环境搭建"><a href="#环境搭建" class="headerlink" title="环境搭建"></a>环境搭建</h4><p>基于ubuntu14.10</p>
+<h5 id="1-安装node-js"><a href="#1-安装node-js" class="headerlink" title="1. 安装node.js"></a>1. 安装node.js</h5><p>用来生成静态页面的</p>
+<h5 id="2-安装git"><a href="#2-安装git" class="headerlink" title="2.安装git"></a>2.安装git</h5><p>用来把本地的hexo内容提交到github上去</p>
+<h5 id="3-申请GitHub"><a href="#3-申请GitHub" class="headerlink" title="3.申请GitHub"></a>3.申请GitHub</h5><p>用来做博客的远程创库、域名、服务器之类的</p>
+<h5 id="4-安装HEXO"><a href="#4-安装HEXO" class="headerlink" title="4.安装HEXO"></a>4.安装HEXO</h5><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo npm install -g hexo</div></pre></td></tr></table></figure>
+<h5 id="5-初始化"><a href="#5-初始化" class="headerlink" title="5.初始化"></a>5.初始化</h5><p>执行init命令初始化hexo到你指定的目录, 比如我在本地home中新建了一个<code>hexo</code>文件夹, 然后<code>cd  hexo</code></p>
+<p>执行<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">hexo init</div></pre></td></tr></table></figure></p>
+<p>这样就完成了安装,确实很简单</p>
+<h5 id="6-生成静态页面"><a href="#6-生成静态页面" class="headerlink" title="6.生成静态页面"></a>6.生成静态页面</h5><p>在我刚才创建的hexo目录下，执行如下命令，生成静态页面至hexo\public\目录。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">hexo generate （或者简写 hexo g ）</div></pre></td></tr></table></figure>
+<h5 id="7-本地启动"><a href="#7-本地启动" class="headerlink" title="7.本地启动"></a>7.本地启动</h5><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">hexo server</div></pre></td></tr></table></figure>
+<p>然后在浏览器中输入 <a href="http://localhost:4000" target="_blank" rel="external">http://localhost:4000</a>  (我的页面能正常显示)</p>
+<h5 id="8-配置github"><a href="#8-配置github" class="headerlink" title="8.配置github"></a>8.配置github</h5><p>首先在github上创建一个新的仓库,仓库名叫<code>your_user_name.github.io</code>,然后与本地建立关联.</p>
+<p>在刚才创建的文件夹hexo下的_config.yml文件</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">vim _config.yml</div></pre></td></tr></table></figure>
+<p>将最下面的<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">deploy: </div><div class="line">  <span class="built_in">type</span>:</div></pre></td></tr></table></figure></p>
+<p>修改为<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">deploy: </div><div class="line">  <span class="built_in">type</span>: git </div><div class="line">  repository: https://github.com/willlims/willlims.github.io.git</div><div class="line">  branch: master</div></pre></td></tr></table></figure></p>
+<p>我的github名为willlims,将<code>https://github.com/willlims/willlims.github.io.git</code>中的willlims改成你的github名就ok了.</p>
+<h5 id="9-执行如下命令实现git部署-可以理解成保存刚才的配置"><a href="#9-执行如下命令实现git部署-可以理解成保存刚才的配置" class="headerlink" title="9.执行如下命令实现git部署(可以理解成保存刚才的配置)"></a>9.执行如下命令实现git部署(可以理解成保存刚才的配置)</h5><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm install hexo-deployer-git --save</div></pre></td></tr></table></figure>
+<p>然后，执行配置命令<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">hexo deploy</div></pre></td></tr></table></figure></p>
+<p>然后再浏览器中输入<code>https://your_git_name.github.io</code>就行了，我的github的账户叫willlims,所以地址是<a href="https://willlims.github.io" target="_blank" rel="external">https://willlims.github.io</a>, 把<code>your_git_name</code>这个改成你github的账户名就行了.</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2016/07/10/hello-world/" data-id="ciqgel60x00000gldkk07q3hg" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-my-first-test-article-1" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2016/07/10/my-first-test-article-1/" class="article-date">
+  <time datetime="2016-07-10T10:12:28.000Z" itemprop="datePublished">2016-07-10</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/07/10/my-first-test-article-1/">my first test article</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2016/07/10/my-first-test-article-1/" data-id="ciqgfybhh000111ldk9w3bf7b" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-my-first-test-article" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2016/07/10/my-first-test-article/" class="article-date">
+  <time datetime="2016-07-10T10:12:21.000Z" itemprop="datePublished">2016-07-10</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/07/10/my-first-test-article/">my first test article</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <hr>
+<h2 id="title-Hello-World"><a href="#title-Hello-World" class="headerlink" title="title: Hello World"></a>title: Hello World</h2><p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
 <h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
 <p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
 <h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
@@ -96,7 +191,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/07/10/hello-world/" data-id="ciqgel60x00000gldkk07q3hg" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2016/07/10/my-first-test-article/" data-id="ciqgfy7ku000011lddew9qtgn" class="article-share-link">Share</a>
       
       
     </footer>
@@ -136,7 +231,15 @@
       <ul>
         
           <li>
-            <a href="/2016/07/10/hello-world/">Hello World</a>
+            <a href="/2016/07/10/hello-world/">hexo搭建</a>
+          </li>
+        
+          <li>
+            <a href="/2016/07/10/my-first-test-article-1/">my first test article</a>
+          </li>
+        
+          <li>
+            <a href="/2016/07/10/my-first-test-article/">my first test article</a>
           </li>
         
       </ul>
