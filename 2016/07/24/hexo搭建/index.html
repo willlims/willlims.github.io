@@ -3,14 +3,36 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Hexo</title>
+  <title>hexo搭建 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://yoursite.com/index.html">
+  <meta name="description" content="跟一个同学闲聊中无意中了解了hexo,它是一款基于Node.js的静态博客框架.
+环境搭建基于ubuntu14.10
+1. 安装node.js用来生成静态页面的
+2.安装git用来把本地的hexo内容提交到github上去
+3.申请GitHub用来做博客的远程创库、域名、服务器之类的
+4.安装HEXO1sudo npm install -g hexo
+5.初始化执行init命令初始化hexo到你指">
+<meta property="og:type" content="article">
+<meta property="og:title" content="hexo搭建">
+<meta property="og:url" content="http://yoursite.com/2016/07/24/hexo搭建/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="跟一个同学闲聊中无意中了解了hexo,它是一款基于Node.js的静态博客框架.
+环境搭建基于ubuntu14.10
+1. 安装node.js用来生成静态页面的
+2.安装git用来把本地的hexo内容提交到github上去
+3.申请GitHub用来做博客的远程创库、域名、服务器之类的
+4.安装HEXO1sudo npm install -g hexo
+5.初始化执行init命令初始化hexo到你指">
+<meta property="og:updated_time" content="2016-07-10T13:52:02.089Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hexo">
+<meta name="twitter:title" content="hexo搭建">
+<meta name="twitter:description" content="跟一个同学闲聊中无意中了解了hexo,它是一款基于Node.js的静态博客框架.
+环境搭建基于ubuntu14.10
+1. 安装node.js用来生成静态页面的
+2.安装git用来把本地的hexo内容提交到github上去
+3.申请GitHub用来做博客的远程创库、域名、服务器之类的
+4.安装HEXO1sudo npm install -g hexo
+5.初始化执行init命令初始化hexo到你指">
   
     <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -59,9 +81,7 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main">
-  
-    <article id="post-hexo搭建" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-hexo搭建" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2016/07/24/hexo搭建/" class="article-date">
   <time datetime="2016-07-24T14:03:36.719Z" itemprop="datePublished">2016-07-24</time>
@@ -74,8 +94,8 @@
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/07/24/hexo搭建/">hexo搭建</a>
+    <h1 class="article-title" itemprop="name">
+      hexo搭建
     </h1>
   
 
@@ -115,58 +135,19 @@
     </footer>
   </div>
   
-</article>
-
-
+    
+<nav id="article-nav">
   
-    <article id="post-git别名" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2016/07/24/git别名/" class="article-date">
-  <time datetime="2016-07-24T13:58:36.000Z" itemprop="datePublished">2016-07-24</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/07/24/git别名/">git别名</a>
-    </h1>
+    <a href="/2016/07/24/git别名/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">git别名</div>
+    </a>
   
+</nav>
 
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>git用的频率多了,还是感觉输入整个命令有点麻烦,这时可一用给git配置一套别名来解决.</p>
-<p>比如我认为<code>git branch</code>用的多了都会感觉不舒服,如果用<code>git b</code>会轻松许多.</p>
-<p>首先需要知道这种别名配置的文件地址,在每个项目中,git的配置文件在.git/config中,<br>例如下面的配置,<code>git b</code>就代表’git branch’.<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">[branch <span class="string">"master"</span>]</div><div class="line">        remote = origin</div><div class="line">        merge = refs/heads/master</div><div class="line">[branch <span class="string">"feature/readme"</span>]</div><div class="line">        remote = origin</div><div class="line">        merge = refs/heads/feature/readme</div><div class="line">[<span class="built_in">alias</span>]</div><div class="line">        b = branch</div></pre></td></tr></table></figure></p>
-<p>[alias]就是别名的相关配置</p>
-<p>同时在根目录下有个.gitconfig文件,也可以在此文件中添加alias别名配置,如果同时配置了全局的alias和单个项目中的alias,则在这单个项目中用对应的.git/config的配置</p>
-<p>下面根目录下的配置</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">[user]</div><div class="line">        name = your_name</div><div class="line">        email = your@xx.com</div><div class="line">[push]</div><div class="line">        default = matching</div><div class="line">[<span class="built_in">alias</span>]</div><div class="line">        s = status</div><div class="line">        b = branch</div><div class="line">        cb = checkout -b</div></pre></td></tr></table></figure>
-<p>如果执行下面的命令也会生成相应的配置<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ git config --global alias.b branch</div></pre></td></tr></table></figure></p>
-<p>也可以加引号<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ git config --global alias.s  <span class="string">'status'</span></div></pre></td></tr></table></figure></p>
-<p>所以还能这样<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ git config --global alias.cb  <span class="string">'checkout -b'</span></div></pre></td></tr></table></figure></p>
-<p>生成的配置文件是<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">[<span class="built_in">alias</span>]</div><div class="line">        s = status</div><div class="line">        b = branch</div><div class="line">        cb = checkout -b</div></pre></td></tr></table></figure></p>
-<p>感觉方便就赶紧行动吧!</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/07/24/git别名/" data-id="cir0oepof0000c2ldsx6y98f5" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
   
 </article>
-
-
-  
 
 </section>
         
