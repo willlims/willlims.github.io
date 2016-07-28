@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  
+  <url>
+    <loc>http://yoursite.com/2016/07/24/git%E5%88%AB%E5%90%8D/</loc>
+    
+    <lastmod>2016-07-24T13:59:27.295Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/2016/07/24/hexo%E6%90%AD%E5%BB%BA/</loc>
+    
+    <lastmod>2016-07-10T13:52:02.089Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/firstpage/index-1.html</loc>
+    
+    <lastmod>2016-07-10T12:20:02.833Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/firstpage/index.html</loc>
+    
+    <lastmod>2016-07-10T12:19:50.769Z</lastmod>
+    
+  </url>
+  
+</urlset>
